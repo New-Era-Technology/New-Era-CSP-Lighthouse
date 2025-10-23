@@ -1,7 +1,4 @@
 <#
-
-Requires Powershell 7.1 or later. 
-
 Execute:
 
 .\Deploy-Lighthouse-Bulk.ps1 `
@@ -43,6 +40,8 @@ Execute:
   .\Deploy-Lighthouse-Bulk.ps1 `
     -WhatIf
 #>
+
+#Requires -Version 7.1
 
 [CmdletBinding(SupportsShouldProcess = $true, PositionalBinding = $false)]
 param(

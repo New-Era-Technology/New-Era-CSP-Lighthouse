@@ -131,7 +131,7 @@ if (-not $OutputCsv) {
 
 # Get and verify the JSON and Auth data 
 try {
-  $jsonPath = 'https://github.com/New-Era-Technology/New-Era-CSP-Lighthouse/blob/54461f6de47ed4a275b819220093b04968c537cf/NET-CSP-Lighthouse.json'
+  $jsonPath = 'https://raw.githubusercontent.com/New-Era-Technology/New-Era-CSP-Lighthouse/refs/heads/main/NET-CSP-Lighthouse.json'
   $templateJson = (New-Object System.Net.WebClient).DownloadString($jsonPath) | ConvertFrom-Json  -AsHashtable
 	
   $managedByTenantId = ""
@@ -214,8 +214,7 @@ foreach ($subId in $SelectedSubs) {
       Verbose      = $true
       ErrorAction  = 'Stop'
     }
-    if ($paramObject.Count -gt 0) { $deployParams.TemplateParameterObject = $paramObject }
-    if ($WhatIf)                  { $deployParams.WhatIf = $true }
+    if ($WhatIf){ $deployParams.WhatIf = $true }
 
     Write-Host "     Deploying at subscription scope as '$deploymentName' in $Location ..." -ForegroundColor Cyan
 	$result = New-AzSubscriptionDeployment @deployParams

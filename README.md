@@ -18,9 +18,9 @@ What it does:
 
 How to use:
 
-From a PowerShell window in the same folder as the script:
-
-.\\Deploy-Lighthouse-Bulk.ps1
+- Download Deploy-Lighthouse-Bulk.ps1 to your PC.
+- Using a PowerShell 7.1 (minimum) window, chang to the path whwrw the file was downloaded.
+- execute ".\Deploy-Lighthouse-Bulk.ps1"
 
 Note: additional options are shown in the script
 

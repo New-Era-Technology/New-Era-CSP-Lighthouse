@@ -21,6 +21,7 @@
   "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
   "mspAssignmentName": "[guid(parameters('mspOfferName'))]",
   "managedByTenantId": "TBD",
+  "HighestAdminAgent": "b24988ac-6180-42a0-ab88-20f7382dd24c",
   "authorizations": [
    {
     "principalId": "5ef297f0-fa81-4f22-a96d-979a8a00c594",
@@ -29,7 +30,7 @@
    },
    {
     "principalId": "574f3a55-1753-4f65-9c5d-70ecc426fae6",
-    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+    "roleDefinitionId": ["variables('HighestAdminAgent')"],
     "principalIdDisplayName": "AdminAgents"
    },
    {

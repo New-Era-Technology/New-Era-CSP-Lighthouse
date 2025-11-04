@@ -30,7 +30,7 @@
    },
    {
     "principalId": "574f3a55-1753-4f65-9c5d-70ecc426fae6",
-    "roleDefinitionId": ["variables('HighestAdminAgent')"],
+    "roleDefinitionId": "[variables('HighestAdminAgent')]",
     "principalIdDisplayName": "AdminAgents"
    },
    {
